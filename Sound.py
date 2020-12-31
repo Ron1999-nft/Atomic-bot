@@ -1,7 +1,7 @@
 from playsound import playsound
 import keyboard
 
-def playing_sound_Repeatedly(): # -> loop
+def playing_sound_repeatedly(): # -> loop
     print('Press C to exist the sound')
     while True:
         # python file\PLay beep sound\ is edited from path file

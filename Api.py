@@ -1,6 +1,6 @@
 import requests
 import json
-from Sound import playing_sound_Repeatedly
+from Sound import playing_sound_repeatedly
 
 class Api:
     def __init__(self, price : int, link : str):
