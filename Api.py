@@ -39,7 +39,7 @@ class Api:
             self.data = self.__get_data()
             self.lowest_price = self.__get_min_price()
             if self.__is_min() == True:
-                playing_sound_Repeatedly()
+                break
             elif self.__is_min() == False:
                 continue
 
