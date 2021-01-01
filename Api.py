@@ -5,7 +5,7 @@ from Sound import playing_sound_repeatedly
 class Api:
     def __init__(self, price: int, link: str):
         self.link = link
-        self.min_price = price
+        self.my_price = price
         self.data = self.__get_data()
         self.lowest_price = self.__get_min_price()
 
@@ -29,20 +29,21 @@ class Api:
         return amount
 
     def __is_min(self) -> bool:
-        if self.lowest_price <= self.min_price:
+        if self.lowest_price <= self.my_price:
+            self.__print_price()
             return True
         else:
             return False
 
-    def retrive_and_check(self) -> None:
+    def __print_price(self):
         print("The lowest price is now " + str(self.lowest_price))
-        while True:
-            self.data = self.__get_data()
-            self.lowest_price = self.__get_min_price()
-            if self.__is_min() == True:
-                break
-            elif self.__is_min() == False:
-                continue
+        
+    def retrive_and_check(self) -> None:
+        self.__print_price()
+        self.data = self.__get_data()
+        self.lowest_price = self.__get_min_price()
+        if self.__is_min() == True:
+            playing_sound_repeatedly()
 
 
 
