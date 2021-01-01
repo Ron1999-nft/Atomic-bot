@@ -36,10 +36,13 @@ class Api:
 
     def retrive_and_check(self) -> None:
         print("The lowest price is now " + str(self.lowest_price))
-        self.data = self.__get_data()
-        self.lowest_price = self.__get_min_price()
-        if self.__is_min() == True:
-            playing_sound_repeatedly()
+        while True:
+            self.data = self.__get_data()
+            self.lowest_price = self.__get_min_price()
+            if self.__is_min() == True:
+                break
+            elif self.__is_min() == False:
+                continue
 
 
 
