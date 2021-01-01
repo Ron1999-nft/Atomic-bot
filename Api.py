@@ -3,11 +3,11 @@ import json
 from Sound import playing_sound_repeatedly
 
 class Api:
-    def __init__(self, price : int, link : str):
+    def __init__(self, price: int, link: str):
         self.link = link
         self.min_price = price
-        self.data = None
-        self.lowest_price = None
+        self.data = self.__get_data()
+        self.lowest_price = self.__get_min_price()
 
     def __get_data(self) -> dict:
         """
@@ -35,6 +35,7 @@ class Api:
             return False
 
     def retrive_and_check(self) -> None:
+        print("The lowest price is now " + str(self.lowest_price))
         while True:
             self.data = self.__get_data()
             self.lowest_price = self.__get_min_price()
