@@ -9,3 +9,4 @@ if __name__ == '__main__':
     while True:
         for i in range(file.size):
             api_arr[i].retrive_and_check()
+

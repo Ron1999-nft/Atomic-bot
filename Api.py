@@ -37,7 +37,7 @@ class Api:
 
     def __print_price(self):
         print("The lowest price is now " + str(self.lowest_price))
-
+        
     def retrive_and_check(self) -> None:
         self.__print_price()
         self.data = self.__get_data()
