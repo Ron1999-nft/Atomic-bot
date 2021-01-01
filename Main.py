@@ -1,10 +1,9 @@
 from Api import Api
-from Read_data import File
+from Read_data import read_file
 from Sound import playing_sound_repeatedly
 
 if __name__ == '__main__':
-    file = File()
-    api_arr = []
-    for i in range(file.size):
-        api_arr.append(Api(int(file.price[i]), file.link[i]))
-    api_arr[0].retrive_and_check()
+    link_and_price = read_file()
+    api = Api(link_and_price[0]["price"], link_and_price[0]["link"])
+    api.retrive_and_check()
+    playing_sound_repeatedly()
