@@ -1,2 +1,3 @@
-50 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=kogsofficial&schema_name=1stedition&match=Wade&page=1&limit=100&order=asc&sort=price
+40 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=kogsofficial&schema_name=1stedition&match=Wade&page=1&limit=100&order=asc&sort=price
 10000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&schema_name=blocks&match=1MB%20Block&page=1&limit=100&order=asc&sort=price
+0.8 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=pepe&schema_name=s2sticker&match=Pepes%27%20Throne%3A%20December%208%2C%202020&page=1&limit=100&order=asc&sort=price

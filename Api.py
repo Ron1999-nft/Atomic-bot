@@ -34,8 +34,18 @@ class Api:
         else:
             return False
 
+    def __get_collection_name(self) -> str:
+        return self.data["data"][0]["assets"][0]["collection"]["collection_name"]
+
+    def __get_name(self) -> str:
+        return self.data["data"][0]["assets"][0]["template"]["immutable_data"]["name"]
+
+    def __get_rarity(self) -> str:
+        return self.data["data"][0]["assets"][0]["template"]["immutable_data"]["rarity"]
+
     def __print_price(self):
-        print("The lowest price is now " + str(self.lowest_price))
+        print("lowest price : " + str(self.lowest_price) + ", collection name : " + self.__get_collection_name() + ", name : " + self.__get_name())
+
 
     def retrive_and_check(self) -> None:
         self.__print_price()
