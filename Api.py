@@ -1,6 +1,10 @@
+# required pip install
 import requests
-import json
 from Sound import playing_sound_repeatedly
+import time
+
+# does not required pip install
+import json
 
 class Api:
     def __init__(self, price: int, link: str):
@@ -14,6 +18,8 @@ class Api:
         get the data from the link
         :return: dictionary which contain the data
         """
+        # TIme delay cause there is a rate limit in the api
+        time.sleep(5) 
         data = requests.get(self.link)
         return json.loads(data.text)
 
