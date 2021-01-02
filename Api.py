@@ -52,6 +52,8 @@ class Api:
         self.data = self.__get_data()
         self.lowest_price = self.__get_min_price()
         if self.__is_min() == True:
+            # You can buy ....
+            print('Now is the lowest price for collection' + self.__get_collection_name() + " name : " + self.__get_name())
             playing_sound_repeatedly()
 
 
