@@ -1,6 +1,10 @@
+# required pip install
 import requests
-import json
 from Sound import playing_sound_repeatedly
+import time
+
+# does not required pip install
+import json
 
 class Api:
     def __init__(self, price: int, link: str):
@@ -14,6 +18,8 @@ class Api:
         get the data from the link
         :return: dictionary which contain the data
         """
+        # TIme delay cause there is a rate limit in the api
+        time.sleep(5) 
         data = requests.get(self.link)
         return json.loads(data.text)
 
@@ -57,7 +63,7 @@ class Api:
         self.lowest_price = self.__get_min_price()
         if self.__is_min() == True:
             # You can buy ....
-            print('Now is the lowest price for collection' + self.__get_collection_name() + " name : " + self.__get_name())
+            print('Now is the lowest price for collection: ' + self.__get_collection_name() + " name : " + self.__get_name())
             playing_sound_repeatedly()
 
 
