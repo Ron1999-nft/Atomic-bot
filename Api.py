@@ -18,10 +18,15 @@ class Api:
         get the data from the link
         :return: dictionary which contain the data
         """
-        # TIme delay cause there is a rate limit in the api
-        time.sleep(5) 
-        data = requests.get(self.link)
-        return json.loads(data.text)
+        try:
+            # TIme delay cause there is a rate limit in the api
+            time.sleep(5)
+            data = requests.get(self.link)
+            return json.loads(data.text)
+        except:
+            print("API is not working 1")
+            print(self.data)
+            self.retrive_and_check()
 
     def __get_min_price(self) -> int:
         """
@@ -35,7 +40,8 @@ class Api:
             amount = amount / 10 ** precision
             return amount
         except:
-            print("API is not working")
+            print(self.data)
+            print("API is not working 2")
             self.retrive_and_check()
 
     def __is_min(self) -> bool:
@@ -58,9 +64,9 @@ class Api:
 
 
     def retrive_and_check(self) -> None:
-        self.__print_price()
         self.data = self.__get_data()
         self.lowest_price = self.__get_min_price()
+        self.__print_price()
         if self.__is_min() == True:
             # You can buy ....
             print('Now is the lowest price for collection: ' + self.__get_collection_name() + " name : " + self.__get_name())
