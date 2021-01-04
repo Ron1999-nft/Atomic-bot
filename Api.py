@@ -28,11 +28,15 @@ class Api:
         get the minimum price from the data
         :return: minimum price
         """
-        amount = float(self.data["data"][0]["price"]["amount"])  # amount in string
-        # amount_size = len(amount) # get length of amount
-        precision = int(self.data["data"][0]["price"]["token_precision"])  # get precision
-        amount = amount / 10 ** precision
-        return amount
+        try:
+            amount = float(self.data["data"][0]["price"]["amount"])  # amount in string
+            # amount_size = len(amount) # get length of amount
+            precision = int(self.data["data"][0]["price"]["token_precision"])  # get precision
+            amount = amount / 10 ** precision
+            return amount
+        except:
+            print("API is not working")
+            self.retrive_and_check()
 
     def __is_min(self) -> bool:
         if self.lowest_price <= self.my_price:
