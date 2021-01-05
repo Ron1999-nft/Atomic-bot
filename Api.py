@@ -65,8 +65,7 @@ class Api:
         return self.data["data"][0]["assets"][0]["template"]["immutable_data"]["rarity"]
 
     def __print_price(self):
-        prYellow("Set price : " + str(self.my_price)) 
-        print( ", lowest price : " + str(self.lowest_price) + ", collection name : " + self.__get_collection_name() + ", name : " + self.__get_name())
+        print("Set price : " + str(self.my_price) + ", lowest price : " + str(self.lowest_price) + ", collection name : " + self.__get_collection_name() + ", name : " + self.__get_name())
 
     def retrive_and_check(self) -> None:
         self.data = self.__get_data()
