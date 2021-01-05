@@ -2,7 +2,7 @@
 import requests
 from Sound import playing_sound_repeatedly
 import time
-from colorama import Fore, Back, Style 
+
 # does not required pip install
 import json
 
