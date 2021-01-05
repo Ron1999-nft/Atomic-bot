@@ -25,7 +25,7 @@ class Api:
         """
         try:
             # TIme delay cause there is a rate limit in the api
-            time.sleep(1)
+            time.sleep(0.3)
             data = requests.get(self.link)
             return json.loads(data.text)
         except:
