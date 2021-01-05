@@ -1,8 +1,1 @@
-9000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&schema_name=blocks&match=1MB%20Block&page=1&limit=100&order=asc&sort=price
-15000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&schema_name=blocks&match=2MB%20Block%20%28M2%29&page=1&limit=100&order=asc&sort=price
-4500 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=alien.worlds&order=asc&schema_name=land.worlds&sort=price
-300 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&order=asc&schema_name=satoshi&sort=price
-3500 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&order=asc&schema_name=theuprising&sort=price
-400 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1collection_name=bitcoinorign&order=desc&schema_name=satoshi&sort=created&symbol=WAX
-2000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1collection_name=bitcoinorign&order=asc&schema_name=promo&sort=price&symbol=WAX
-400 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1collection_name=bitcoinorign&order=asc&schema_name=cypher&sort=price&symbol=WAX
+0.9 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=pepe&order=asc&sort=price&symbol=WAX

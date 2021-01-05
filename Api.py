@@ -2,9 +2,14 @@
 import requests
 from Sound import playing_sound_repeatedly
 import time
-
+from colorama import Fore, Back, Style 
 # does not required pip install
 import json
+
+#---------PRINTING COLOUR------------------#
+def prGreen(skk): print("\033[92m {}\033[00m" .format(skk)) 
+def prYellow(skk): print("\033[93m {}\033[00m" .format(skk), end = '')
+#---------PRINTING COLOUR------------------#
 
 class Api:
     def __init__(self, price: int, link: str):
@@ -60,8 +65,8 @@ class Api:
         return self.data["data"][0]["assets"][0]["template"]["immutable_data"]["rarity"]
 
     def __print_price(self):
-        print("lowest price : " + str(self.lowest_price) + ", collection name : " + self.__get_collection_name() + ", name : " + self.__get_name())
-
+        prYellow("Set price : " + str(self.my_price)) 
+        print( ", lowest price : " + str(self.lowest_price) + ", collection name : " + self.__get_collection_name() + ", name : " + self.__get_name())
 
     def retrive_and_check(self) -> None:
         self.data = self.__get_data()
@@ -69,7 +74,7 @@ class Api:
         self.__print_price()
         if self.__is_min() == True:
             # You can buy ....
-            print('Now is the lowest price for collection: ' + self.__get_collection_name() + " name : " + self.__get_name())
+            prGreen('******** Hit item, collection name: ' + self.__get_collection_name() + ", schema name : " + self.__get_name() + ", current price : "  + str(self.lowest_price) + " WAX" " ******")
             playing_sound_repeatedly()
 
 
