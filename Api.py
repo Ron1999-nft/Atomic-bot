@@ -61,17 +61,12 @@ class Api:
     def get_name(self) -> str:
         return self.data["data"][0]["assets"][0]["template"]["immutable_data"]["name"]
 
-    def __get_rarity(self) -> str:
+    def get_rarity(self) -> str:
         return self.data["data"][0]["assets"][0]["template"]["immutable_data"]["rarity"]
 
-<<<<<<< Updated upstream
-    def __print_price(self):
-        print("Set price : " + str(self.my_price) + ", lowest price : " + str(self.lowest_price) + ", collection name : " + self.__get_collection_name() + ", name : " + self.__get_name())
-=======
     def print_price(self):
-        print("lowest price : " + str(self.lowest_price) + ", collection name : " + self.get_collection_name() + ", name : " + self.get_name())
-
->>>>>>> Stashed changes
+        prYellow("Set price : " + str(self.my_price))
+        print(", lowest price : " + str(self.lowest_price) + ", collection name : " + self.get_collection_name() + ", name : " + self.get_name())
 
     def retrive_and_check(self) -> None:
         self.data = self.get_data()
@@ -79,12 +74,8 @@ class Api:
         self.print_price()
         if self.is_min() == True:
             # You can buy ....
-<<<<<<< Updated upstream
-            prGreen('******** Hit item, collection name: ' + self.__get_collection_name() + ", schema name : " + self.__get_name() + ", current price : "  + str(self.lowest_price) + " WAX" " ******")
-=======
-            print('Now is the lowest price for collection: ' + self.get_collection_name() + " name : " + self.get_name())
->>>>>>> Stashed changes
-            playing_sound_repeatedly()
+            prGreen('******** Hit item, collection name: ' + self.__get_collection_name() + ", schema name : " + self.__get_name() + ", current price : " + str(self.lowest_price) + " WAX" " ******")
+
 
 
 
