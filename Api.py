@@ -65,8 +65,7 @@ class Api:
         return self.data["data"][0]["assets"][0]["template"]["immutable_data"]["rarity"]
 
     def print_price(self):
-        prYellow("Set price : " + str(self.my_price))
-        print(", lowest price : " + str(self.lowest_price) + ", collection name : " + self.get_collection_name() + ", name : " + self.get_name())
+        print("Set price : " + str(self.my_price) + ", lowest price : " + str(self.lowest_price) + ", collection name : " + self.get_collection_name() + ", name : " + self.get_name())
 
     def retrive_and_check(self) -> None:
         self.data = self.get_data()
@@ -74,7 +73,7 @@ class Api:
         self.print_price()
         if self.is_min() == True:
             # You can buy ....
-            prGreen('******** Hit item, collection name: ' + self.__get_collection_name() + ", schema name : " + self.__get_name() + ", current price : " + str(self.lowest_price) + " WAX" " ******")
+            prGreen('******** Hit item, collection name: ' + self.get_collection_name() + ", schema name : " + self.get_name() + ", current price : " + str(self.lowest_price) + " WAX" " ******")
 
 
 
