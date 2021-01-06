@@ -8,7 +8,6 @@ import json
 
 #---------PRINTING COLOUR------------------#
 def prGreen(skk): print("\033[92m {}\033[00m" .format(skk)) 
-def prYellow(skk): print("\033[93m {}\033[00m" .format(skk), end = '')
 #---------PRINTING COLOUR------------------#
 
 class Api:
@@ -78,6 +77,7 @@ class Api:
         if self.is_min() == True:
             # You can buy ....
             prGreen('******** Hit item, collection name: ' + self.get_collection_name() + ", schema name : " + self.get_name() + ", current price : " + str(self.lowest_price) + " WAX" " ******")
+            playing_sound_repeatedly()
 
 
 
