@@ -1,9 +1,13 @@
-****bitcoinorigin
-300 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&order=asc&schema_name=satoshi&sort=price&symbol=WAX
-9000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&match=1MB&order=asc&schema_name=blocks&sort=price&symbol=WAX
-20000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&match=2MB&order=asc&schema_name=blocks&sort=price&symbol=WAX
-5000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&order=asc&schema_name=theuprising&sort=price&symbol=WAX
-****kogs(2ndedition)
-1000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=kogsofficial&data:text.object=Slammer&data:text.rarity=ultra%20rare&order=asc&schema_name=2ndedition&sort=price&symbol=WAX
-****alien worlds
-5000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=alien.worlds&order=asc&schema_name=land.worlds&sort=price&symbol=WAX
+*btc origin
+9000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&schema_name=blocks&match=1MB%20Block&page=1&limit=100&order=asc&sort=price
+15000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&schema_name=blocks&match=2MB%20Block%20%28M2%29&page=1&limit=100&order=asc&sort=price
+500 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&schema_name=satoshi&match=Satoshi2&page=1&limit=100&order=asc&sort=price
+3000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&schema_name=satoshi&match=Satoshi1&page=1&limit=100&order=asc&sort=price
+250 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&schema_name=satoshi&match=Satoshi3&page=1&limit=100&order=asc&sort=price
+*alien world
+3000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=alien.worlds&schema_name=land.worlds&page=1&limit=100&order=asc&sort=price
+*kogs
+325 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=kogsofficial&schema_name=packs&match=Collector%27s%20Booster%20Pack%20-%202nd%20Edition&page=1&limit=100&order=asc&sort=price
+500 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=kogsofficial&schema_name=packs&match=KOGs%20Booster%20Pack%201st%20Edition&page=1&limit=100&order=asc&sort=price
+900 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=kogsofficial&schema_name=packs&match=Collector%27s%20Starter%20Pack%20-%202nd%20Edition&page=1&limit=100&order=asc&sort=price
+2500 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=kogsofficial&schema_name=packs&match=KOGs%20Starter%20Pack%201st%20Edition&page=1&limit=100&order=asc&sort=price
