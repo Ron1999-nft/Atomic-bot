@@ -17,6 +17,8 @@ class File():
             line = filehandle.readline()
             if not line:
                 break
+            if line[0] == "*":
+                line = filehandle.readline()
             line = line.strip("\n")
             line = line.split(" ")
 
