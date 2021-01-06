@@ -1,9 +1,0 @@
-****bitcoinorigin
-300 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&order=asc&schema_name=satoshi&sort=price&symbol=WAX
-9000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&match=1MB&order=asc&schema_name=blocks&sort=price&symbol=WAX
-20000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&match=2MB&order=asc&schema_name=blocks&sort=price&symbol=WAX
-5000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=bitcoinorign&order=asc&schema_name=theuprising&sort=price&symbol=WAX
-****kogs(2ndedition)
-1000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=kogsofficial&data:text.object=Slammer&data:text.rarity=ultra%20rare&order=asc&schema_name=2ndedition&sort=price&symbol=WAX
-****alien worlds
-5000 https://wax.api.atomicassets.io/atomicmarket/v1/sales?state=1&collection_name=alien.worlds&order=asc&schema_name=land.worlds&sort=price&symbol=WAX
