@@ -50,10 +50,14 @@ class Api:
             self.retrive_and_check()
 
     def is_min(self) -> bool:
-        if self.lowest_price <= self.my_price:
-            return True
-        else:
-            return False
+        try:
+            if self.lowest_price <= self.my_price:
+                return True
+            else:
+                return False
+        except:
+            print("API is not working 3")
+            self.retrive_and_check()
 
     def get_collection_name(self) -> str:
         return self.data["data"][0]["assets"][0]["collection"]["collection_name"]
