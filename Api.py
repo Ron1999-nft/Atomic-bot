@@ -15,10 +15,10 @@ class Api:
     def __init__(self, price: int, link: str):
         self.link = link
         self.my_price = price
-        self.data = self.__get_data()
-        self.lowest_price = self.__get_min_price()
+        self.data = self.get_data()
+        self.lowest_price = self.get_min_price()
 
-    def __get_data(self) -> dict:
+    def get_data(self) -> dict:
         """
         get the data from the link
         :return: dictionary which contain the data
@@ -33,7 +33,7 @@ class Api:
             print(self.data)
             self.retrive_and_check()
 
-    def __get_min_price(self) -> int:
+    def get_min_price(self) -> int:
         """
         get the minimum price from the data
         :return: minimum price
@@ -49,31 +49,41 @@ class Api:
             print("API is not working 2")
             self.retrive_and_check()
 
-    def __is_min(self) -> bool:
+    def is_min(self) -> bool:
         if self.lowest_price <= self.my_price:
             return True
         else:
             return False
 
-    def __get_collection_name(self) -> str:
+    def get_collection_name(self) -> str:
         return self.data["data"][0]["assets"][0]["collection"]["collection_name"]
 
-    def __get_name(self) -> str:
+    def get_name(self) -> str:
         return self.data["data"][0]["assets"][0]["template"]["immutable_data"]["name"]
 
     def __get_rarity(self) -> str:
         return self.data["data"][0]["assets"][0]["template"]["immutable_data"]["rarity"]
 
+<<<<<<< Updated upstream
     def __print_price(self):
         print("Set price : " + str(self.my_price) + ", lowest price : " + str(self.lowest_price) + ", collection name : " + self.__get_collection_name() + ", name : " + self.__get_name())
+=======
+    def print_price(self):
+        print("lowest price : " + str(self.lowest_price) + ", collection name : " + self.get_collection_name() + ", name : " + self.get_name())
+
+>>>>>>> Stashed changes
 
     def retrive_and_check(self) -> None:
-        self.data = self.__get_data()
-        self.lowest_price = self.__get_min_price()
-        self.__print_price()
-        if self.__is_min() == True:
+        self.data = self.get_data()
+        self.lowest_price = self.get_min_price()
+        self.print_price()
+        if self.is_min() == True:
             # You can buy ....
+<<<<<<< Updated upstream
             prGreen('******** Hit item, collection name: ' + self.__get_collection_name() + ", schema name : " + self.__get_name() + ", current price : "  + str(self.lowest_price) + " WAX" " ******")
+=======
+            print('Now is the lowest price for collection: ' + self.get_collection_name() + " name : " + self.get_name())
+>>>>>>> Stashed changes
             playing_sound_repeatedly()
 
 
