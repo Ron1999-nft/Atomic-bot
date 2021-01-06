@@ -78,6 +78,7 @@ class Api:
             # You can buy ....
             prGreen('******** Hit item, collection name: ' + self.get_collection_name() + ", schema name : " + self.get_name() + ", current price : " + str(self.lowest_price) + " WAX" " ******")
             playing_sound_repeatedly()
+            #sdasdasdasdasdasdasdasd
 
 
 
