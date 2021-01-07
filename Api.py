@@ -7,7 +7,7 @@ import time
 import json
 
 #---------PRINTING COLOUR------------------#
-def prGreen(skk): print("\033[92m {}\033[00m" .format(skk)) 
+def prGreen(skk): print("\033[92m {}\033[0m" .format(skk)) 
 #---------PRINTING COLOUR------------------#
 
 class Api:
