@@ -4,9 +4,14 @@ import unittest
 from Api import Api
 
 class ApiTest(unittest.TestCase):
-    @patch.object("Api.MyClass")
+    @mock.patch("Api.Api")
     def test_failed_data(self,mock_class):
-        mc = mock_class.return_value
+        mock_class.return_value.get_data.return_value = {"success": False,"message": "string"}
+        test = mock_class(100,"haha")
+        print(test.get_data())
+
+    def test_failed_data_2(self):
+        api = Api(100,"haha")
 
 def main():
     # Create the test suite from the cases above.
