@@ -2,12 +2,13 @@
 import requests
 from Sound import playing_sound_repeatedly
 import time
-
+from Error_Checking import error_checking
 # does not required pip install
 import json
 
 #---------PRINTING COLOUR------------------#
-def prGreen(skk): print("\033[92m {}\033[0m" .format(skk))
+def prGreen(skk):
+    print("\033[92m {}\033[0m" .format(skk))
 #---------PRINTING COLOUR------------------#
 
 class Api:
@@ -28,21 +29,18 @@ class Api:
             data = requests.get(self.link)
             return json.loads(data.text)
         except:
-            raise("Api 1 is not working")
+            raise("link is not working")
 
     def get_min_price(self) -> int:
         """
         get the minimum price from the data
         :return: minimum price
         """
-        try:
-            amount = float(self.data["data"][0]["price"]["amount"])  # amount in string
-            # amount_size = len(amount) # get length of amount
-            precision = int(self.data["data"][0]["price"]["token_precision"])  # get precision
-            amount = amount / 10 ** precision
-            return amount
-        except:
-            raise("Api 2 is not working")
+        amount = float(self.data["data"][0]["price"]["amount"])  # amount in string
+        # amount_size = len(amount) # get length of amount
+        precision = int(self.data["data"][0]["price"]["token_precision"])  # get precision
+        amount = amount / 10 ** precision
+        return amount
 
 
     def is_min(self) -> bool:
@@ -50,14 +48,10 @@ class Api:
         checking price is minimum or not
         :return: True when my price is higher than min price
         """
-        try:
-            if self.lowest_price <= self.my_price:
-                return True
-            else:
-                return False
-        except:
-            raise("Api 3 is not working")
-
+        if self.lowest_price <= self.my_price:
+            return True
+        else:
+            return False
 
     def get_collection_name(self) -> str:
         return self.data["data"][0]["assets"][0]["collection"]["collection_name"]
@@ -70,8 +64,7 @@ class Api:
 
     def retrive_and_check(self) -> None:
         self.data = self.get_data()
-        if self.data["success"] == False:
-            print("wrong")
+        error_checking(self.data)
         self.lowest_price = self.get_min_price()
         self.print_price()
         if self.is_min() == True:
