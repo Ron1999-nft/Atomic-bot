@@ -8,7 +8,4 @@ if __name__ == '__main__':
         api_arr.append(Api(float(file.price[i]), file.link[i]))
     while True:
         for i in range(file.size):
-            try:
-                api_arr[i].retrive_and_check()
-            except:
-                continue
+            api_arr[i].retrive_and_check()
