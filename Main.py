@@ -2,6 +2,9 @@ from Api import Api
 from Read_data import File
 
 if __name__ == '__main__':
+    """
+    Main which read file
+    """
     file = File()
     api_arr = []
     for i in range(file.size):
