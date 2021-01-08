@@ -63,6 +63,9 @@ class Api:
         print("Set price : " + str(self.my_price) + ", lowest price : " + str(self.lowest_price) + ", collection name : " + self.get_collection_name() + ", name : " + self.get_name())
 
     def retrive_and_check(self) -> None:
+        """
+        check to min price 
+        """
         self.data = self.get_data()
         error_checking(self.data)
         self.lowest_price = self.get_min_price()
