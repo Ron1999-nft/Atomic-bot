@@ -64,7 +64,7 @@ class Api:
 
     def retrive_and_check(self) -> None:
         """
-        check to min price 
+        check to min price
         """
         self.data = self.get_data()
         error_checking(self.data)

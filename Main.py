@@ -3,7 +3,7 @@ from Read_data import File
 
 if __name__ == '__main__':
     """
-    Main which read file
+    Main which read file and read file
     """
     file = File()
     api_arr = []
