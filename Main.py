@@ -8,7 +8,7 @@ def prYellow(text):
 
 if __name__ == '__main__':
     """
-    Main which read file and read file
+    Main which read file and read file and determine
     """
     while True:
         filename = "Atomic.txt"
