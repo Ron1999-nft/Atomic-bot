@@ -18,10 +18,12 @@ if __name__ == '__main__':
             if not line:
                 filehandle.close()
                 break
-            while line[0] == "*":
+            if line == "\n":
+                continue
+            if line[0] == "*":
                 line = line.strip("\n")
                 prYellow(line)
-                line = filehandle.readline()
+                continue
             line = line.strip("\n")
             line = line.split(" ")
             api = Api(float(line[0]),line[1])
