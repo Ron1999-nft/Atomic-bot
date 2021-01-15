@@ -64,6 +64,9 @@ class Api:
     def print_price(self):
         print("Set price : " + str(self.my_price) + ", lowest price : " + str(self.lowest_price) + ", collection name : " + self.get_collection_name() + ", name : " + self.get_name())
 
+    def print_link(self):
+        print("https://wax.atomichub.io/market/sale/" + self.data["data"][0]["sale_id"])
+
     def retrive_and_check(self) -> None:
         """
         check to min price
@@ -75,4 +78,5 @@ class Api:
         if self.is_min() == True:
             # You can buy ....
             prGreen('******** Hit item, collection name: ' + self.get_collection_name() + ", schema name : " + self.get_name() + ", current price : " + str(self.lowest_price) + " WAX" " ******")
+            self.print_link()
             playing_sound_repeatedly()
