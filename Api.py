@@ -11,6 +11,9 @@ import json
 #---------PRINTING COLOUR------------------#
 def prGreen(skk):
     print("\033[92m {}\033[0m" .format(skk))
+
+def prRed(text):
+    print('\033[31m', text, '\033[0m', sep='')
 #---------PRINTING COLOUR------------------#
 
 class Api:
@@ -65,7 +68,7 @@ class Api:
         print("Set price : " + str(self.my_price) + ", lowest price : " + str(self.lowest_price) + ", collection name : " + self.get_collection_name() + ", name : " + self.get_name())
 
     def print_link(self):
-        print("https://wax.atomichub.io/market/sale/" + self.data["data"][0]["sale_id"])
+        prRed("https://wax.atomichub.io/market/sale/" + self.data["data"][0]["sale_id"])
 
     def retrive_and_check(self) -> None:
         """
