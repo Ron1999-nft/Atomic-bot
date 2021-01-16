@@ -31,7 +31,7 @@ class Api:
             data = requests.get(self.link)
             return json.loads(data.text)
         except:
-            raise("link is not working")
+            raise TypeError("link is not working")
 
     def get_min_price(self) -> int:
         """
