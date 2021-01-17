@@ -27,4 +27,7 @@ if __name__ == '__main__':
             line = line.strip("\n")
             line = line.split(" ")
             api = Api(float(line[0]),line[1])
-            api.retrive_and_check()
+            try:
+                api.retrive_and_check()
+            except:
+                print("link is not working")
